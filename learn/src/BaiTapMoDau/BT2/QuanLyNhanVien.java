@@ -1,7 +1,5 @@
-package BaiTapMoDau.bt2;
-//import btjava.bt1.NhanVien;
-
-import BaiTapMoDau.bt1.NhanVien;
+package BaiTapMoDau.BT2;
+import BaiTapMoDau.BT2.NhanVien;
 
 import java.util.ArrayList;
 

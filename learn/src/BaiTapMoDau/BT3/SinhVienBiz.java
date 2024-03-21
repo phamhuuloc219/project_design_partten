@@ -1,4 +1,4 @@
-package BaiTapMoDau.bt3;
+package BaiTapMoDau.BT3;
 
 public class SinhVienBiz extends SinhVienNTU {
     double diemMarketing, diemSales;

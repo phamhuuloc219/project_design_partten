@@ -1,4 +1,4 @@
-package BaiTapMoDau.bt3;
+package BaiTapMoDau.BT3;
 
 public class SinhVienIT extends SinhVienNTU{
     double diemJava, diemCss, diemHtml;

@@ -1,6 +1,6 @@
-package BaiTapMoDau.bt2;
+package BaiTapMoDau.BT2;
 
-import BaiTapMoDau.bt1.NhanVien;
+import BaiTapMoDau.BT2.NhanVien;
 
 public interface IQuanLy {
     void them(NhanVien nv);

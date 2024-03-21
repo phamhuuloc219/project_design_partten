@@ -1,5 +1,5 @@
-package BaiTapMoDau.bt2;
-import BaiTapMoDau.bt1.NhanVien;
+package BaiTapMoDau.BT2;
+import BaiTapMoDau.BT2.NhanVien;
 public class BT2_Main {
     public static void main(String[] args) {
         QuanLyNhanVien quanLyNhanVien = new QuanLyNhanVien();
