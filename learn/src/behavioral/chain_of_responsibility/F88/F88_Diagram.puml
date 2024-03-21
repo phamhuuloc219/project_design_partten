@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class NhanVienF88
+class ChuTich
+class NhanVien
+NhanVienF88 <|-- ChuTich
+'thua ke <|--
+NhanVienF88 <|-- NhanVien
+NhanVien ---> NhanVienF88: capTren
+MainF88 --> NhanVienF88
+abstract class NhanVienF88{
+    String ten
+    String chucVu
+    int hanMucXuLyVay
+    +{abstract} NhanVienF88 capCaoHon(NhanVienF88 nv)
+    +{abstract} String xuLyKhoanVay(int tienVay)
+}
+
+class NhanVien{
+    + String xuLyKhoanVay(int tienVay)
+}
+
+note right of NhanVien::xuLyKhoanVay
+    - kiểm tra nếu tienVay <= hanMucXuLyVay:
+        trả về : chức vụ tên xử lý khoản hanMucXuLy
+            (VD: Bảo về Hoàng xử lý khoản vay 500k)
+    ngược lại: Chuyển công việc xử lý vay cho cấp trên
+
+end note
+
+class ChuTich{
+    +String xuLyKhoanVay((int tienVay)
+}
+note right of ChuTich::xuLyKhoanVay
+    - Kiểm tra nếu tienVay <= hanMucXuLyVay:
+        trả về: chức vụ tên xử lý khoản hanMucXuLy
+    ngược lại: không cho vay
+end note
+note right of NhanVienF88::capCaoHon
+    gán nv cho biến capTren
+    trả về capTren
+    chú ý: Chủ tịch không cài đặt phương thức này
+end note
+note right of MainF88
+    trong phương thức main:
+        + tạo các dối tượng NhanVienF88 thuộc lớp NhanVien
+        + tạo các đối tượng NhanVienF88 thuộc lớp ChuTich
+        + kết nối chuỗi các đối tượng
+        + Gọi phương thức xuLyKhoanVay trên đối tượng đàu tiên của chuỗi
+end note
+@enduml
