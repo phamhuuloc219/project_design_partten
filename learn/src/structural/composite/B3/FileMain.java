@@ -6,16 +6,16 @@ public class FileMain {
         File file1 = new File("file1.txt","2024-03-11");
         File file2 = new File("file2.txt","2024-03-14");
         Folder subfolder = new Folder("subfolder", "2023-11-17");
+        File file3 = new File("file3.txt", "2023-11-18");
 
         PHL.add(file1);
         PHL.add(file2);
         PHL.add(subfolder);
-
-        subfolder.add(new File("file3.txt", "2023-11-18"));
+        subfolder.add(file3);
 
         System.out.println(PHL.getStringTreeFolder());
-        PHL.remove(subfolder);
-        System.out.println(PHL.getStringTreeFolder());
+//        PHL.remove(subfolder);
+//        System.out.println("Remove subfolder :\n" + PHL.getStringTreeFolder());
 
     }
 }

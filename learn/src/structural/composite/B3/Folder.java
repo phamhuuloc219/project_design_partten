@@ -24,7 +24,7 @@ public class Folder extends AbstractFile{
     public String getStringTreeFolder() {
         StringBuilder sb = new StringBuilder(ten + "\n");
         for (AbstractFile f : children) {
-            sb.append("  ").append(f.getStringTreeFolder());
+            sb.append("\t").append(f.getStringTreeFolder()+"\n");
         }
         return sb.toString();
     }
