@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class KeHoachHocTap{
+    #String tenMH
+    +{abstract} void add(KeHoachHocTap keHoachHocTap)
+    +{abstract} void remove(KeHoachHocTap keHoachHocTap)
+    +{abstract} int getSoTC()
+    +{abstract} int getHocPhi()
+    +{abstract} String thongTin()
+
+}
+class MonHoc{
+    # int soTC, hocPhi
+}
+KeHoachHocTap <|-- MonHoc
+KeHoachHocTap <|-- QLMonHoc
+QLMonHoc *--> KeHoachHocTap: list
+
+note bottom of MonHoc
+getSoTC:
+    return soTC
+getHocPhi:
+    return soTC*hocPhi
+thongTin:
+    Ví dụ: Toán 1, Số TC: 3, Học Phí:980
+end note
+
+note bottom of QLMonHoc
+getSoTC:
+    duyệt qua danh sách KeHoachHocTap keHoachHocTap của list
+    Tính tổng Số tín chỉ của thành phần keHoachHocTap
+getHocPhi:
+    duyệt qua danh sách KeHoachHocTap keHoachHocTap của list
+    Tính tổng học phí của thành phần keHoachHocTap
+thongTin:
+
+end note
+
+@enduml
