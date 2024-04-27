@@ -6,7 +6,7 @@ abstract class ATM_TheoMenhGia{
     +{abstract} void rutTien(int soTien)
 }
 abstract ChuoiMenhGiaFactory{
-    +{abstract} ATM_TheoMenhGia getChuoiTheoMenhGia (int menhGiaTien)
+    #{abstract} ATM_TheoMenhGia getChuoiTheoMenhGia (int menhGiaTien)
     +{abstract} void rutTien(int soTien, int menhGiaCaoNhat)
 }
 
