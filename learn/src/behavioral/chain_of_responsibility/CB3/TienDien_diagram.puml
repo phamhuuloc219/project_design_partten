@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class TienDienBacThang{
+    int gia, min, max
+    String tenBac
+    +{abstract}int tienDien(int soKw)
+    +{abstract}TienDienBacThang bacKeTiep(TienDienBacThang b)
+}
+TienDienBacThang <|-- BacThongThuong
+TienDienBacThang <|-- BacCaoNhat
+TienDienBacThang <-- BacThongThuong : bacKeTiep
+
+@enduml
