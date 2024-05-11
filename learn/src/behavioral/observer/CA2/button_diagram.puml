@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Activity
+class Button
+interface MyButton
+
+MyButton <|..Button
+Activity <-- Button : activity
+Activity o--> MyButton : listeners
+note right of Activity
+    subject
+end note
+note right of Button
+    concrete observer
+end note
+@enduml

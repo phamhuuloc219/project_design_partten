@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+class PlayerData{
+    int thoiGian, countDown, grade
+}
+class Dashboard
+interface PlayerDataListener{
+    + void listen(PlayerData data)
+}
+
+Dashboard ..|> PlayerDataListener
+Dashboard --> PlayerData: playerData
+PlayerData --> PlayerDataListener:listener
+
+note right of PlayerData
+    Subject
+    Các setter:
+        khi cập nhật xong giá trị
+        thì gọi phương thức listen của listener
+end note
+
+note right of Dashboard
+    Concrete Observer
+end note
+
+
+@enduml
