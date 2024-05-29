@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class giaiThuongVeSo{
+    String tenGiai
+    +{abstract}String doVe(String so);
+    +{abstract}giaiThuongVeSo giaiThuongKeTiep(giaiThuongVeSo keTiep);
+}
+class GiaiThuong{
+    String [] soTrung
+}
+giaiThuongVeSo <|-- GiaiTam
+giaiThuongVeSo <|-- GiaiThuong
+giaiThuongVeSo <-- GiaiThuong : giaiKeTiep
+
+@enduml

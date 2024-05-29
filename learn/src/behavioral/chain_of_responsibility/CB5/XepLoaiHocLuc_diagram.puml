@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class XepLoaiHocLuc{
+    +{abstract} XepLoaiHocLuc hocLucCaohon(XepLoaiHocLuc xepLoaiHocLuc)
+    +{abstract} String XepLoai(double Diem)
+
+}
+class HocLuc{
+    double diem;
+    int  max;
+    String xeploai;
+}
+XepLoaiHocLuc<|-- HocLuc
+
+@enduml
