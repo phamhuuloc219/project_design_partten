@@ -9,4 +9,11 @@ public class Monhoc {
         this.stc = stc;
     }
 
+    @Override
+    public String toString() {
+        return "Monhoc{" +
+                "ten='" + ten + '\'' +
+                ", stc=" + stc +
+                '}';
+    }
 }

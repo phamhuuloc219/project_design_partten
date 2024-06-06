@@ -1,0 +1,13 @@
+@startuml
+
+class PlayerData{
+int thoiGian, countDown, grade
+}
+interface PlayerDataListener{
+void listen(PlayerData data)
+}
+class DashBoard
+PlayerData --> PlayerDataListener: listener
+DashBoard --> PlayerData : playerData
+DashBoard ..|> PlayerDataListener
+@enduml

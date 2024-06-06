@@ -13,16 +13,16 @@ public class MainIterator {
         }
     }
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
-        System.out.println("Cách 1");
-        Iterator iterator = list.iterator();
-        while ((iterator.hasNext())){
-            System.out.println(iterator.next());
-        }
-        System.out.println("Cách 2");
-        Iterator<Integer> iterator2 = list.iterator();
-        iterator2.forEachRemaining(integer ->
-                System.out.println(integer));
+//        List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+//        System.out.println("Cách 1");
+//        Iterator iterator = list.iterator();
+//        while ((iterator.hasNext())){
+//            System.out.println(iterator.next());
+//        }
+//        System.out.println("Cách 2");
+//        Iterator<Integer> iterator2 = list.iterator();
+//        iterator2.forEachRemaining(integer ->
+//                System.out.println(integer));
         List<Monhoc> mhs = new ArrayList<>(Arrays.asList(
                 new Monhoc("Thể dục",2),
                 new Monhoc("Xắc suất thống kê",3),
